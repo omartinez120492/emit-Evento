@@ -1,0 +1,11 @@
+<h5>Add User</h5>
+
+<form (ngSubmit)="addUser()">
+    <input type="text" placeholder="Name" [(ngModel)]="user.name" name="name"/>
+    <input type="text" placeholder="Last Name" [(ngModel)]="user.lastName" name="lastName"/>
+    <input type="text" placeholder="Phone" [(ngModel)]="user.phone" name="phone"/>
+  <button type="submit">Agregar</button>
+</form>
+<p>
+  Datos del usuario: {{ user | json }}
+</p>

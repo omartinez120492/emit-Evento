@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './interfaces/user.interface';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'eventsAndServices';
+  
+
+  public users: User[] = [
+    {
+      name: 'John',
+      lastName: 'Doe',
+      phone: '1234567890'
+    },
+    {
+      name: 'Jane',
+      lastName: 'Doe',
+      phone: '1234567890'
+    }
+  ];  
+
+  public addUser(user: User): void {
+    this.users.push(user);
+  }
+
 }

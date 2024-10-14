@@ -1,0 +1,9 @@
+<h3>List of Users</h3>
+
+<ul>
+  <li *ngFor="let user of users">{{ user.name }} {{ user.lastName }} {{ user.phone }}</li>
+</ul>
+
+<hr>
+
+<app-add (agregarUsuario)="agregarUsuario($event)"></app-add>
